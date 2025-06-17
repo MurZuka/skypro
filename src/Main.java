@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+<<<<<<< homework5
         System.out.println("Задача 1");
 
         byte clientOS = 0;
@@ -62,5 +63,9 @@ public class Main {
                     break;
             }
         }
+=======
+
+        System.out.println("Привет, мир!");
+>>>>>>> master
     }
 }
