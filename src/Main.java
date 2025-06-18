@@ -1,71 +1,99 @@
 public class Main {
-    public static void main(String[] args) {
-<<<<<<< homework5
-        System.out.println("Задача 1");
+        public static void main(String[] args) {
+            System.out.println("Задача 1");
+            int targetSum = 2459000;
+            int monthlySum = 15000;
+            int currentSum = 0;
+            int monthsNeeded = 0;
 
-        byte clientOS = 0;
-        String os = clientOS == 1 ? "Android" : "iOS";
+            do {
+                currentSum += monthlySum;
+                monthsNeeded++;
 
-        System.out.println("Установите версию приложения для " + os + " по ссылке");
+                System.out.println("Месяц " + monthsNeeded + ", сумма накоплений равна " + currentSum + " рублей");
+            } while (currentSum < targetSum);
 
-        System.out.println("Задача 2");
-        short clientDeviceYear = 2015;
+            System.out.println("Задача 2");
 
-        if (clientDeviceYear < 2015) {
-            System.out.println("Установите облегчённую версию приложения для " + os + " по ссылке");
-        } else {
-            System.out.println("Установите версию приложения для " + os + " по ссылке");
-        }
+            byte i = 1;
+            while (i <= 10) {
+                System.out.print(i + " ");
+                i++;
+            }
 
-        System.out.println("Задача 3");
-        short year = 2021;
-        boolean isLeap = year > 1584 && year % 4 == 0 && !(year % 100 == 0 && !(year % 400 == 0));
+            System.out.println("");
 
-        System.out.println("Год" + (isLeap ? "" : " не") + " является високосным");
+            for (i = 10; i > 0; i--) {
+                System.out.print(i + " ");
+            }
 
-        System.out.println("Задача 4");
-        short deliveryDistance = 95;
-        byte days = 0;
+            System.out.println("");
 
-        if (deliveryDistance >= 0 && deliveryDistance <= 20) {
-            days = 1;
-        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
-            days = 2;
-        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            days = 3;
-        } else {
-            System.out.println("Доставки нет");
-        }
+            System.out.println("Задача 3");
 
-        if (days > 0) {
-            System.out.println("Потребуется дней: " + days);
-        }
+            int currentPopulation = 12_000_000;
+            float birthRate = (float) 17 / 1000;
+            float deathRate = (float) 8 / 1000;
 
-        System.out.println("Задача 5");
-        byte monthNumber = 12;
+            for (int year = 1; year <= 10; year++) {
+                currentPopulation = (int) (currentPopulation + (currentPopulation * birthRate) - (currentPopulation * deathRate));
+                System.out.println("Год " + year + ", численность населения составляет " + currentPopulation);
+            }
 
-        if (monthNumber >= 1 && monthNumber <= 12) {
-            switch (monthNumber) {
-                case 1, 2, 12:
-                    System.out.println("Зима");
-                    break;
+            System.out.println("Задача 4");
 
-                case 3, 4, 5:
-                    System.out.println("Весна");
-                    break;
+            float interestRate = 0.07f;
+            monthsNeeded = 0;
+            currentSum = 15000;
+            targetSum = 12000000;
 
-                case 6, 7, 8:
-                    System.out.println("Лето");
-                    break;
+            while (currentSum <= targetSum) {
+                currentSum += currentSum * interestRate;
+                monthsNeeded++;
 
-                case 9, 10, 11:
-                    System.out.println("Осень");
-                    break;
+                System.out.println("Месяц " + monthsNeeded + ", сумма накоплений равна " + currentSum + " рублей");
+            }
+
+            System.out.println("Задача 5");
+
+            monthsNeeded = 0;
+            currentSum = 15000;
+
+            while (currentSum <= targetSum) {
+                currentSum += currentSum * interestRate;
+                monthsNeeded++;
+
+                if (monthsNeeded % 6 == 0)
+                    System.out.println("Месяц " + monthsNeeded + ", сумма накоплений равна " + currentSum + " рублей");
+            }
+
+            System.out.println("Задача 6");
+
+            currentSum = 15000;
+
+            for (monthsNeeded = 1; monthsNeeded <= (9 * 12); monthsNeeded++) {
+                currentSum += currentSum * interestRate;
+
+                if (monthsNeeded % 6 == 0) {
+                    System.out.println("Месяц " + monthsNeeded + ", сумма накоплений равна " + currentSum + " рублей");
+                }
+            }
+
+            System.out.println("Задача 7");
+
+            for (int fridayNum = 2; fridayNum <= 31; fridayNum += 7) {
+                System.out.println("Сегодня пятница, " + fridayNum + "-е число. Необходимо подготовить отчёт");
+            }
+
+            System.out.println("Задача 8");
+
+            short initialYear = 1825;
+
+            for (short year = initialYear; year <= (initialYear + 300); year++) {
+                if (year % 79 == 0) {
+                    System.out.println(year);
+                }
             }
         }
-=======
-
-        System.out.println("Привет, мир!");
->>>>>>> master
     }
 }
