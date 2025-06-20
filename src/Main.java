@@ -9,8 +9,29 @@ public class Main {
         printVersion(0, 2025);
 
         System.out.println("Задача 3");
+        byte deliveryDays = daysToDeliver(95);
+
+        if (deliveryDays > 0) {
+            System.out.println("Потребуется дней: " + deliveryDays);
+        } else {
+            System.out.println("Доставки нет");
+        }
     }
 
+    public static byte daysToDeliver (int distance) {
+        byte days = 0;
+
+        if (distance >= 0 && distance <= 20) {
+            days = 1;
+        } else if (distance > 20 && distance < 60) {
+            days = 2;
+        } else if (distance >= 60 && distance <= 100) {
+            days = 3;
+        }
+
+        return days;
+    }
+    
     public static void isYearLeap (int year) {
         boolean isLeap = year > 1584 && year % 4 == 0 && !(year % 100 == 0 && !(year % 400 == 0));
         String appendix = "";
