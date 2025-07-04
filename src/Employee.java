@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Employee {
-    private static int id;
+    private static int id = 0;
     private final int employeeId;
     private String fullName;
     private int department;
@@ -45,7 +45,7 @@ public class Employee {
         return "ID: " + getId() + ";\n" +
                "ФИО: " + getFullName() + ";\n" +
                "Отдел: " + getDepartment() + ";\n" +
-               "Зарплата: " + getSalary()+ ".";
+               "Зарплата: " + getSalary() + ".";
     }
 
     public String toString(int targetDepartment) {
